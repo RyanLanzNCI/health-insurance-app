@@ -13,21 +13,21 @@ exports.calculate = (age, answers) => {
 
     // Adjust quote based on answers to health questions
 
-    // Do you smoke?
+    //Smoker
     if (answers.q1) baseQuote += 100;
 
-    // How many days are you active?
+    //Days a week active?
     if (answers.q2 < 3) baseQuote += 50;
     else if (answers.q2 >= 3) baseQuote -= 30;
 
-    // Any chronic diseases?
+    //Cronic illnesses?
     if (answers.q3) baseQuote += 150; // Changed from == to +=
 
-    // Do you drink?
+    //Alcohol?
     if (answers.q4 < 2) baseQuote += 50;
     else if (answers.q4 >= 5) baseQuote -= 20;
 
-    // History of chronic illness?
+    //Family illness history?
     if (answers.q5) baseQuote += 100;
 
     return baseQuote;
