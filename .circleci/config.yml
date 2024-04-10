@@ -32,5 +32,8 @@ jobs:
             - ./node_modules
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
+          name: Mocha Executable
+          command: chmod +x ./node_modules/.bin/mocha
+      - run:
           name: Run Tests
           command: npm test
