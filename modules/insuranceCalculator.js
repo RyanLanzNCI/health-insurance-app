@@ -5,7 +5,7 @@ exports.calculate = (age, answers) => {
     // Adjust quote based on age
     if (age >= 18 && age <= 25) {
         baseQuote += 50;
-    } else if (age > 26 && age <= 40) {
+    } else if (age >= 26 && age <= 40) {
         baseQuote += 30;
     } else if (age > 40) {
         baseQuote += 70;
@@ -21,7 +21,7 @@ exports.calculate = (age, answers) => {
     else if (answers.q2 >= 3) baseQuote -= 30;
 
     //Cronic illnesses?
-    if (answers.q3) baseQuote += 150; // Changed from == to +=
+    if (answers.q3) baseQuote += 150;
 
     //Alcohol?
     if (answers.q4 < 2) baseQuote += 50;
