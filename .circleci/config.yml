@@ -14,7 +14,7 @@ jobs:
   build:
     working_directory: ~/health-insurance-app-master
     docker:
-      - image: cimg/node:17.2.0 
+      - image: cimg/node:18.17.0 
     steps:
       - checkout
       - run:
