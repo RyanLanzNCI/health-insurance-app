@@ -1,5 +1,8 @@
 // Calculates the insurance quote from user input
 exports.calculate = (age, answers) => {
+
+    console.log("Input age:", age);
+    console.log("Input answers", answers);
     let baseQuote = 100;
 
     // Adjust quote based on age
@@ -10,6 +13,8 @@ exports.calculate = (age, answers) => {
     } else if (age > 40) {
         baseQuote += 70;
     }
+
+    console.log("Base quote after age adjustment: ", baseQuote);
 
     // Adjust quote based on answers to health questions
 
