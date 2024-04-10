@@ -12,7 +12,7 @@ workflows:
 
 jobs:
   build:
-    working_directory: ~/health-insurance-app
+    working_directory: ~/health-insurance-app-master
     docker:
       - image: cimg/node:14.17.0 
     steps:
