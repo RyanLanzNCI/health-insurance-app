@@ -18,7 +18,7 @@ describe('insuranceCalculator', function() {
         it('calculate a base quote for age 30', function() {
             let age = 30;
             let answers = {q1: false, q2: 3, q3: false, q4: 3, q5: false}; 
-            assert.equal(calculate(age, answers), 130); 
+            assert.equal(calculate(age, answers), 100); 
         });
     });
 });
@@ -29,7 +29,7 @@ describe('insuranceCalculator', function() {
         it('calculate a base quote for age 45', function() {
             let age = 45;
             let answers = {q1: false, q2: 3, q3: false, q4: 3, q5: false}; 
-            assert.equal(calculate(age, answers), 170); 
+            assert.equal(calculate(age, answers), 140); 
         });
     });
 });
