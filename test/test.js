@@ -15,9 +15,9 @@ describe('insuranceCalculator', function() {
 //Tests for ages 26-40
 describe('insuranceCalculator', function() {
     describe('Calculates base quote for ages 26-40', function() {
-        it('should calculate a base quote for age 30', function() {
+        it('calculate a base quote for age 30', function() {
             let age = 30;
-            let answers = {q1: false, q2: 3, q3: false, q4: 5, q5: false}; 
+            let answers = {q1: false, q2: 3, q3: false, q4: 3, q5: false}; 
             assert.equal(calculate(age, answers), 130); 
         });
     });
@@ -26,10 +26,10 @@ describe('insuranceCalculator', function() {
 //Tests for 40+
 describe('insuranceCalculator', function() {
     describe('Calculates base quote for ages above 40', function() {
-        it('should calculate a base quote for age 45', function() {
+        it('calculate a base quote for age 45', function() {
             let age = 45;
-            let answers = {q1: false, q2: 3, q3: false, q4: 5, q5: false}; // No extra costs
-            assert.equal(calculate(age, answers), 170); // 100 + 70 for age
+            let answers = {q1: false, q2: 3, q3: false, q4: 3, q5: false}; 
+            assert.equal(calculate(age, answers), 170); 
         });
     });
 });
