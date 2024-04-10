@@ -1,5 +1,5 @@
 var assert = require('assert');
-var insuranceCalculator = require("../modules/utils")
+var insuranceCalculator = require("../modules/insuranceCalculator")
 
 describe('insuranceCalculator', function() {
     describe('Creates a base quote for all ages between 18 - 25', function() {
