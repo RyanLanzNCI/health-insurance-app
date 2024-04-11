@@ -1,4 +1,4 @@
-sudo apt update && sudo apt install nodejs npm
+sudo apt update && sudo apt install -g nodejs npm
 sudo npm install -g pm2
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
@@ -7,6 +7,6 @@ export NVM_DIR="$HOME/.nvm"
 nvm install 18.17.0
 nvm use 18.17.0
 pm2 stop insurance_app
-cd health-insurance-app/
+cd health-insurance-app-master/
 npm install
-pm2 start bin/www --name insurance_app
+pm2 start bin/www --name health_app
