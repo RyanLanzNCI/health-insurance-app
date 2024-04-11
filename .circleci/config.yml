@@ -26,11 +26,11 @@ jobs:
       - checkout
       - run:
           name: Update NPM
-          command: 'sudo npm install -g npm@latest' 
+          command: 'sudo npm install -g npm@latest'
       - restore_cache:
           keys:
             - dependency-cache-{{ checksum "package-lock.json" }}
-            - dependency-cache- 
+            - dependency-cache-
       - run:
           name: Install Dependencies
           command: npm install
@@ -46,5 +46,5 @@ jobs:
       - image: cimg/node:18.17.0
     steps:
       - run:
-        name: deploy-application
-        command: ssh -i "devopsProject.pem" ssh -i "devopsProject.pem" ubuntu@ec2-34-241-189-20.eu-west-1.compute.amazonaws.com"rm -rf health-insurance-app-master/; git clone https://github.com/RyanLanzNCI/health-insurance-app.git; source health-insurance-app-master/deploy.sh"
+          name: deploy-application
+          command: ssh -i "devopsProject.pem" ubuntu@ec2-34-241-189-20.eu-west-1.compute.amazonaws.com "rm -rf health-insurance-app-master/; git clone https://github.com/RyanLanzNCI/health-insurance-app.git; source health-insurance-app-master/deploy.sh"
