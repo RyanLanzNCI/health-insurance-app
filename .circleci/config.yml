@@ -47,4 +47,4 @@ jobs:
     steps:
       - run:
           name: deploy-application
-          command: ssh -o StrictHostKeyChecking=no ubuntu@ec2-3-249-234-233.eu-west-1.compute.amazonaws.com "rm -rf health-insurance-app-master/; git clone https://github.com/RyanLanzNCI/health-insurance-app.git health-insurance-app-master; source health-insurance-app-master/deploy.sh"
+          command: ssh -o StrictHostKeyChecking=no ubuntu@ec2-3-249-234-233.eu-west-1.compute.amazonaws.com "export SERVER=\"$SERVER\"; export PRIVATE_KEY=\"$PRIVATE_KEY" rm -rf health-insurance-app-master/; git clone https://github.com/RyanLanzNCI/health-insurance-app.git health-insurance-app-master; source health-insurance-app-master/deploy.sh"
