@@ -46,5 +46,9 @@ jobs:
       - image: cimg/node:18.17.0
     steps:
       - run:
-          name: deploy-application
-          command: ssh -o StrictHostKeyChecking=no ubuntu@ec2-34-241-189-20.eu-west-1.compute.amazonaws.com "rm -rf health-insurance-app-master/; git clone https://github.com/RyanLanzNCI/health-insurance-app.git; source health-insurance-app-master/deploy.sh"
+    name: deploy-application
+    command: |
+      ssh -o StrictHostKeyChecking=no ubuntu@ec2-34-241-189-20.eu-west-1.compute.amazonaws.com "
+      rm -rf health-insurance-app-master/;
+      git clone https://github.com/RyanLanzNCI/health-insurance-app.git health-insurance-app-master;
+      source health-insurance-app-master/deploy.sh"
