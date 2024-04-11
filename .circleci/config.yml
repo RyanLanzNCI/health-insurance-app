@@ -9,6 +9,13 @@ workflows:
             branches:
               only:
                 - master
+      - deploy:
+          filters:
+            branches:
+              only:
+                - main
+          requires:
+            - build
 
 jobs:
   build:
@@ -34,6 +41,10 @@ jobs:
       - run:
           name: Mocha Executable
           command: chmod +x ./node_modules/.bin/mocha
+  deploy:
+    docker:
+      - image: cimg/node:18.17.0
+    steps:
       - run:
-          name: Run Tests
-          command: npm test
+        name: deploy-application
+        command: ssh -i "devopsProject.pem" ssh -i "devopsProject.pem" ubuntu@ec2-34-241-189-20.eu-west-1.compute.amazonaws.com"rm -rf health-insurance-app-master/; git clone https://github.com/RyanLanzNCI/health-insurance-app.git; source health-insurance-app-master/deploy.sh"
