@@ -9,4 +9,4 @@ nvm use 18.17.0
 pm2 stop insurance_app
 cd health-insurance-app/
 npm install
-pm2 start health-insurance-app-master/bin/www --name insurance_app
+pm2 start bin/www --name insurance_app
