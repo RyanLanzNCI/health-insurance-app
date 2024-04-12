@@ -6,7 +6,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 nvm install 18.17.0
 nvm use 18.17.0
-pm2 stop insurance_app
+pm2 stop health_app
 cd health-insurance-app-master/
 npm install
 pm2 start bin/www --name health_app
