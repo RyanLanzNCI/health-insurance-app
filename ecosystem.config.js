@@ -2,7 +2,7 @@
 
 module.exports = {
     apps : [{
-      name: 'health_app',
+      name: 'health-app',
       script: 'bin/www', 
       env: {
         NODE_ENV: 'development'
