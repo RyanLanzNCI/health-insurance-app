@@ -9,6 +9,4 @@ nvm use 18.17.0
 pm2 stop insurance_app
 cd health-insurance-app-master/
 npm install
-echo $PRIVATE_KEY > privatekey.pem
-echo $SERVER > server.crt
 pm2 start bin/www --name health_app
